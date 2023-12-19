@@ -21,6 +21,6 @@ algokit generate typescript &&\
     algokit bootstrap all &&\
     npm run compile-contracts &&\
     npm run generate-clients &&\
-    npm run test ||\
+    npm run test &&\
     npm run dev
 ```
