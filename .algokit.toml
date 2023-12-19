@@ -5,3 +5,7 @@ path = ".algokit/generators/typescript"
 [generate.tealscript]
 description = "Generates a TEALScript contract"
 path = ".algokit/generators/tealscript"
+
+[generate.react]
+description = "Generates a react frontend"
+path = ".algokit/generators/react"
