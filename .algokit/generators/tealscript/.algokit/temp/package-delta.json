@@ -1,7 +1,7 @@
 {
     "devDependencies": {
         "@algorandfoundation/algokit-client-generator": "^2.2.1",
-        "@algorandfoundation/tealscript": "^0.63.0"
+        "@algorandfoundation/tealscript": "^0.70.1"
     },
     "scripts": {
         "compile-contracts": "tealscript contracts/*.algo.ts contracts/artifacts",
