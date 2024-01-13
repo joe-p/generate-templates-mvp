@@ -5,6 +5,6 @@
     },
     "scripts": {
         "compile-contracts": "tealscript contracts/*.algo.ts contracts/artifacts",
-        "generate-client": "algokit generate client contracts/artifacts/ --language typescript  --output contracts/clients/{contract_name}Client.ts"
+        "generate-clients": "algokit generate client contracts/artifacts/ --language typescript  --output contracts/clients/{contract_name}Client.ts"
     }
 }

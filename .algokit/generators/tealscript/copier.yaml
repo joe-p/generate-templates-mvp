@@ -1,2 +1,7 @@
 _tasks:
    - "node ./.algokit/temp/script.js"
+
+# TODO: Input validation
+contract_name:
+   type: str
+   help: What should the name of this contract be?

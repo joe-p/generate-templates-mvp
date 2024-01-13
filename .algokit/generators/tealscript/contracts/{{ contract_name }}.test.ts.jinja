@@ -1,19 +1,19 @@
 import { describe, test, expect, beforeAll, beforeEach } from '@jest/globals';
 import { algorandFixture } from '@algorandfoundation/algokit-utils/testing';
-import { PlaceHolderClient } from './clients/PlaceHolderClient';
+import { {{ contract_name }}Client } from './clients/{{ contract_name }}Client';
 
 const fixture = algorandFixture();
 
-let appClient: PlaceHolderClient;
+let appClient: {{ contract_name }}Client;
 
-describe('PlaceHolder', () => {
+describe('{{ contract_name }}', () => {
     beforeEach(fixture.beforeEach);
 
     beforeAll(async () => {
         await fixture.beforeEach();
         const { algod, testAccount } = fixture.context;
 
-        appClient = new PlaceHolderClient(
+        appClient = new {{ contract_name }}Client(
             {
                 sender: testAccount,
                 resolveBy: 'id',
