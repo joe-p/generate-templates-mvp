@@ -1,0 +1,4 @@
+# TODO: Input validation
+project_name:
+   type: str
+   help: What should the name of this project be?
