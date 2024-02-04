@@ -3,7 +3,7 @@ path = require('path');
 
 const contractsDir = path.join(__dirname, '..', '..',);
 const pkgJsonPath = path.join(contractsDir, 'package.json');
-const prettierConfigPath = path.join(contractsDir, '.prettierrc');
+const prettierConfigPath = path.join(contractsDir, '.prettierrc.toml');
 const eslintConfigPath = path.join(contractsDir, '.eslintrc.js');
 const jestConfigPath = path.join(contractsDir, 'jest.config.js');
 
