@@ -1,0 +1,4 @@
+{
+    "name": "algokit-project",
+    "workspaces": ["contracts/", "frontend/"]
+}
