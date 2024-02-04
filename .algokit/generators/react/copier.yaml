@@ -5,7 +5,7 @@ _subdirectory: template_content
 project_name:
   type: str
   help: Name for this project.
-  placeholder: 'algorand-app'
+  default: 'algorand-app'
 
 author_name:
   type: str
