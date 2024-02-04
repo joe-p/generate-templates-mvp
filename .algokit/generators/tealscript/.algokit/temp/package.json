@@ -3,8 +3,8 @@
     "version": "0.0.0",
     "license": "MIT",
     "scripts": {
-      "generate-client": "algokit generate client artifacts/ --language typescript  --output contracts/clients/{contract_name}Client.ts",
-      "compile-contract": "tealscript contracts/*.algo.ts artifacts/",
+      "generate-client": "algokit generate client artifacts/ --language typescript  --output clients/{contract_name}Client.ts",
+      "compile-contract": "tealscript *.algo.ts artifacts/",
       "generate-components": "algokit-generate-component artifacts/{{ camel_case_name }}.arc32.json artifacts/components",
       "build": "npm run compile-contract && npm run generate-client",
       "test": "npm run build && jest",
