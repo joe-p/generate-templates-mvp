@@ -1,15 +1,16 @@
 fs = require('fs');
 path = require('path');
 
-const pkgJsonPath = path.join(__dirname, '..', '..', 'package.json');
+const contractsDir = path.join(__dirname, '..', '..',);
+const pkgJsonPath = path.join(contractsDir, 'package.json');
+const prettierConfigPath = path.join(contractsDir, '.prettierrc');
+const eslintConfigPath = path.join(contractsDir, '.eslintrc.js');
+const jestConfigPath = path.join(contractsDir, 'jest.config.js');
 
-const delta = JSON.parse(fs.readFileSync(path.join(__dirname, 'package-delta.json'), 'utf-8'));
-const pkgJson = JSON.parse(fs.readFileSync(pkgJsonPath, 'utf-8'));
+const files = [pkgJsonPath, prettierConfigPath, eslintConfigPath, jestConfigPath];
 
-['devDependencies', 'scripts'].forEach(key => {
-    pkgJson[key] = { ...pkgJson[key], ...delta[key] }
+files.forEach((file) => {
+  if (!fs.existsSync(file)) {
+    fs.copyFileSync(path.join(__dirname, path.basename(file)), file);
+  }
 });
-
-fs.writeFileSync(pkgJsonPath, JSON.stringify(pkgJson, undefined, 4));
-
-fs.rmSync(__dirname, { recursive: true, force: true });
